@@ -1,0 +1,95 @@
+
+.esqueceuSenha{
+  margin-left: -34%;
+  font-size: 13px;
+  position: absolute;
+}
+.nCadastro{
+  margin-left: -71%;
+  font-size: 0.9em;
+  bottom: 105px;
+  position: absolute;
+}
+p{
+  font-size:12px;
+  text-decoration: none;
+  color:#ffffff;
+}
+
+h1{
+  font-size:1.5em;
+  color:#525252;
+}
+
+.box{
+  background:white;
+  width:300px;
+  border-radius:6px;
+  margin: 60% auto 0 auto;
+  padding:0px 0px 70px 0px;
+}
+
+.email{
+  background: rgba(255, 255, 255, 0.8);
+  border: #ccc 1px solid;
+  border-bottom: #ccc 2px solid;
+  padding: 8px;
+  width: 109%;
+  color: #AAAAAA;
+  margin-top: 10px;
+  margin-left: -5%;
+  font-size: 1em;
+  height: 47px;
+  border-radius: 9px;
+}
+
+.password{
+  border-radius:4px;
+  background:#ecf0f1;
+  border: #ccc 1px solid;
+  padding: 8px;
+  width:250px;
+  font-size:1em;
+}
+
+.btn{
+  background: #2ecc71;
+  width: 109%;
+  padding-top: 12px;
+  padding-bottom: 5px;
+  color: white;
+  border-radius: 4px;
+  border: #27ae60 1px solid;
+  text-align: center;
+  margin-top: 88px;
+  margin-bottom: 20px;
+  float: left;
+  margin-left: -5%;
+  font-weight: 800;
+  font-size: 1.0em;
+  height: 48px;
+}
+
+.btn:hover{
+  background:#2CC06B; 
+}
+
+#btn2{
+  float:left;
+  background:#3498db;
+  width:125px;  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #2980b9 1px solid;
+  text-align: center;
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-left:10px;
+  font-weight:800;
+  font-size:0.8em;
+}
+
+#btn2:hover{ 
+background:#3594D2; 
+}
