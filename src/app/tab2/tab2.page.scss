@@ -1,14 +1,87 @@
-.iCadastro{
-    margin-top: 40%;
-    text-align: center;
+.menu {
+    background-color: #13CE66;
+    width: 375px;
+    height: 60px;
 }
-.Email{
-color: blue;
-    width: 200px;
+
+.cardCadastro {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.5px dotted #969FAA;
+    border-radius: 33.33px;
+    width: 339px;
+    height: 332px;
+    margin-left: 5%;
+    margin-bottom: -4%;
+    
+}
+
+.cardSubCadastro {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.5px dotted #969FAA;
+    border-radius: 33.33px;
+    width: 300px;
     height: 50px;
-    margin-left: 20%;
-    border-radius: 16%;
+    margin-left: 5.8%;
+    margin-top: 2%;
 }
-.nome{
-    margin-bottom: 10%;
+
+.informacao {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 21.33px;
+    font-weight: 400;
+    line-height: 27.67px;
+    width: 377px;
+    text-align: left;
+    margin-left: 19%;
+    margin-top: 2%;
 }
+
+.camposCadUsuario {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.33px;
+    text-align: left;
+    margin-left: 7%;
+    margin-top: 2.9%;
+    width: 86%;
+    border:0px
+}
+
+.labelCardCadastro{
+    margin-left: 8%;
+    margin-top: 1%;
+    display: inline-block;
+}
+
+.botaoCadastrar {
+    border-radius: 18px;
+    background: #2ecc71;
+    border: #27ae60 1px solid;
+    width: 136.33px;
+    height: 43px;
+    margin-left: 32%;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+
+.textoBtnCadastrar{
+    font-weight: 800;
+    color: white;
+    margin-bottom: 4%;
+    margin-top: 7%;
+    display: inline-block;
+    font-family: inherit;
+}
+
+.logoArvore{
+    width: 16%;
+    margin-left: 42%;
+    margin-top: 0%;
+}
+ input:focus{
+     background: white !important;
+ }

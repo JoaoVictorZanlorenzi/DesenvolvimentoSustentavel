@@ -1,13 +1,31 @@
-<ion-content class="ion-padding">
-  <div class="iCadastro">
-    <label> Informe seus dados cadastrais</label>
-  </div>
-  <br>
-  <label>Nome</label>
-  <br>
-  <input type="nome" name="nome" value="Nome" onFocus="field_focus(this, 'nome');" onblur="field_blur(this, 'nome');"
-    class="nome" />
-  <label>Data</label>
-  <input type="date" id="dia" name="dia">
+<div class="menu">
+</div>
 
-</ion-content>
+<img class="logoArvore" src="assets/icon/logoArvore.png" />
+
+<div class="informacao">
+  <label> Informe seus dados cadastrais</label>
+</div>
+
+<div class="cardCadastro">
+  <label class="labelCardCadastro">Nome</label>
+  <div class="cardSubCadastro">
+    <input type="text" name="nome" class="camposCadUsuario" placeholder="Nome" />
+  </div>
+  <label class="labelCardCadastro">Data de nascimento</label>
+  <div class="cardSubCadastro">
+    <input type="date" name="date" class="camposCadUsuario" />
+  </div>
+  <label class="labelCardCadastro">E-mail</label>
+  <div class="cardSubCadastro">
+    <input name="email" class="camposCadUsuario" placeholder="E-mail" />
+  </div>
+  <label class="labelCardCadastro">Senha</label>
+  <div class="cardSubCadastro">
+    <input type="password" name="senha" class="camposCadUsuario" placeholder="Senha" minlength="6" required/>
+  </div>
+</div>
+
+<div id="btnCadastrar" class="botaoCadastrar">
+  <span class="textoBtnCadastrar">Cadastrar</span>
+</div>
