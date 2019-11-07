@@ -1,1 +1,110 @@
+.menu {
+ background-color: #13CE66;
+ width: 375px;
+ height: 60px;
+}
 
+.iconePerfil{
+ width: 15%;
+ margin-top: 21%;
+ margin-left: 5%;
+ position: absolute;
+}
+
+.cardPerfil {
+ background-color: rgba(255, 255, 255, 0);
+ border: 0.5px dotted #969FAA;
+ border-radius: 33.33px;
+ width: 361.67px;
+ height: 73.33px;
+ margin-bottom: 103%;
+ margin-left: 2%;
+}
+
+.cadSubPerfil{
+ margin-top: 52%;
+ position: absolute;
+}
+
+.camposCadUsuario {
+ color: #47525E;
+ font-family: Lato;
+ font-size: 18px;
+ font-weight: 400;
+ line-height: 26.33px;
+ text-align: left;
+ margin-left: 23%;
+ margin-top: 5.9%;
+ width: 86%;
+ border:0px
+}
+
+.informacao {
+ color: #47525E;
+ font-family: Lato;
+ font-size: 16px;
+ font-weight: 400;
+ line-height: 20.67px;
+ text-align: left;
+ position: absolute;
+ margin-top: 42%;
+ margin-left: 2%;
+ font-weight: bolder;
+}
+
+.borda {
+ width: 100%;
+ border: 0.33px solid black;
+ position: absolute;
+ margin-top: 50%;
+}
+
+.cardSubPerfil {
+background-color: rgba(255, 255, 255, 0);
+border: 0.5px dotted #969FAA;
+border-radius: 33.33px;
+width: 338px;
+height: 41px;
+margin-left: 5.8%;
+margin-top: 2%;
+}
+
+.labelCardPerfil{
+margin-left: 8%;
+margin-top: 1%;
+display: inline-block;
+}
+
+.camposCadPerfil{
+ color: #47525E;
+ font-family: Lato;
+ font-size: 18px;
+ font-weight: 400;
+ line-height: 26.33px;
+ text-align: left;
+ margin-left: 4%;
+ margin-top: 1.9%;
+ width: 86%;
+ border:0px
+}
+
+.botaoSalvar {
+border-radius: 18px;
+background: #2ecc71;
+border: #27ae60 1px solid;
+width: 136.33px;
+height: 43px;
+margin-left: 32%;
+text-align: center;
+margin-bottom: 5%;
+margin-top: 3%;
+}
+
+.textoBtnSalvar{
+font-weight: 800;
+color: white;
+margin-bottom: 4%;
+margin-top: 7%;
+display: inline-block;
+font-family: inherit;
+}
