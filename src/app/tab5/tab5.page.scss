@@ -4,14 +4,28 @@
  height: 60px;
 }
 
-.cardCadastro {
+.logoArvore {
+ opacity: 0.64;
+ margin-left: 84%;
+ margin-top: 2%;
+ width: 15%;
+ height: 7%;
+ position: absolute;
+}
+
+.alteracao{
+ font-family: inherit;
+ line-height: normal;
+}
+
+.cardAlteracao {
  background-color: rgba(255, 255, 255, 0);
  border: 0.5px dotted #969FAA;
  border-radius: 33.33px;
  width: 339px;
- height: 332px;
+ height: 421px;
  margin-left: 5%;
- margin-bottom: -4%;  
+ margin-bottom: -8%;
 }
 
 .cardSubCadastro {
@@ -24,17 +38,11 @@
  margin-top: 2%;
 }
 
-.informacao {
- color: #47525E;
- font-family: Lato;
- font-size: 21.33px;
- font-weight: 400;
- line-height: 27.67px;
- width: 377px;
- text-align: left;
- margin-left: 19%;
- margin-top: 2%;
-}
+.labelCardCadastro{
+ margin-left: 8%;
+ margin-top: 14%;
+ display: inline-block;
+}   
 
 .camposCadUsuario {
  color: #47525E;
@@ -49,13 +57,16 @@
  border:0px
 }
 
-.labelCardCadastro{
- margin-left: 8%;
- margin-top: 1%;
+.textoBtnSalvar {
+ font-weight: 800;
+ color: white;
+ margin-bottom: 4%;
+ margin-top: 7%;
  display: inline-block;
+ font-family: inherit;
 }
 
-.botaoCadastrar {
+.botaoSalvar {
  border-radius: 18px;
  background: #2ecc71;
  border: #27ae60 1px solid;
@@ -66,30 +77,3 @@
  margin-bottom: 5%;
  margin-top: 3%;
 }
-
-.textoBtnCadastrar{
- font-weight: 800;
- color: white;
- margin-bottom: 4%;
- margin-top: 7%;
- display: inline-block;
- font-family: inherit;
-}
-
-.logoArvore{
- width: 16%;
- margin-left: 42%;
- margin-top: 0%;
-}
-
-.logoCirculo{
- position: absolute;
- margin-left: 39%;
- margin-top: 17.5%;
- width: 85.33px;
- height: 85.33px;
-}
-
- input:focus{
-     background: white !important;
- }
