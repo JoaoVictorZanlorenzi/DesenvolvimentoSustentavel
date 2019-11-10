@@ -1,23 +1,25 @@
 <div class="logoArvore">
-  <img src="assets/icon/logoArvore.png">
-</div>
-
-<div class="cardinfoLogin">
-  <label class="informacaoLogin">Reduzir<br></label>
-  <label class="informacaoLogin">Reutilizar<br></label>
-  <label class="informacaoLogin">Reciclar</label>
-</div>
-
-<div class="cardLogin">
-  <div class="cardSubLogin">
-    <input type="text" name="nome" class="camposCadUsuario" placeholder="Nome" />
+    <img src="assets/icon/logoArvore.png">
   </div>
-  <div class="cardSubLogin">
-    <input type="text" name="senha" class="camposCadUsuario" placeholder="Senha" />
+  <form id="frmLogin" action="submit" method="POST">
+      <div class="cardLogin">
+          <div class="cardSubLogin">
+            <input  id="inputLoginEmail" type="text" name="email" class="camposCadUsuario" placeholder="joaodasilva@hotmail.com" />
+          </div>
+          <div class="cardSubLogin">
+            <input id="inputLoginSenha" type="password" name="senha" class="camposCadUsuario" placeholder="Senha" />
+          </div>
+          <span class="esqueceuSenha"><u style="color:#3390FF;">Esqueceu sua senha? </u></span>
+          <span class="nCadastro">Não possui cadastro? <a  href="http://localhost:8100/tabs/tab2" style="color:#3390FF;">Cadastre-se</a></span>
+          <a>
+            <button type="submit" class="botaoLogin">Login</button>
+          </a>
+        </div>    
+  </form>
+  <div class="cardinfoLogin">
+    <label class="informacaoLogin">Reduzir<br></label>
+    <label class="informacaoLogin">Reutilizar<br></label>
+    <label class="informacaoLogin">Reciclar</label>
   </div>
-  <span class="esqueceuSenha"><u style="color:#3390FF;">Esqueceu sua senha? </u></span>
-  <span class="nCadastro">Não possui cadastro? <u style="color:#3390FF;">Cadastre-se</u></span>
-  <a href="#">
-    <div class="botaoLogin">Login</div>
-  </a>
-</div>
+  
+  
