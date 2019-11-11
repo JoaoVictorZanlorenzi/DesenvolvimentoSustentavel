@@ -1,33 +1,41 @@
-<div class="menu">
-</div>
-
-<img class="logoArvore" src="assets/icon/logoArvore.png" />
-
-<img class="logoCirculo" src="assets/icon/iconeCircular.png"/>
-
-<div class="informacao">
-  <label> Informe seus dados cadastrais</label>
-</div>
-
-<div class="cardCadastro">
-  <label class="labelCardCadastro">Nome</label>
-  <div class="cardSubCadastro">
-    <input type="text" name="nome" class="camposCadUsuario" placeholder="Nome" />
-  </div>
-  <label class="labelCardCadastro">Data de nascimento</label>
-  <div class="cardSubCadastro">
-    <input type="date" name="date" class="camposCadUsuario" />
-  </div>
-  <label class="labelCardCadastro">E-mail</label>
-  <div class="cardSubCadastro">
-    <input name="email" class="camposCadUsuario" placeholder="E-mail" />
-  </div>
-  <label class="labelCardCadastro">Senha</label>
-  <div class="cardSubCadastro">
-    <input type="password" name="senha" class="camposCadUsuario" placeholder="Senha" minlength="6" required />
-  </div>
-</div>
-
-<div id="btnCadastrar" class="botaoCadastrar">
-  <span class="textoBtnCadastrar">Cadastrar</span>
-</div>
+﻿<!doctype html>
+ <body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <div class="menu">
+        </div>        
+          <img class="logoArvore" src="assets/icon/logoArvore.png" />
+          
+          <div class="informacao">
+            <label> Informe seus dados cadastrais</label>
+          </div>
+          <form id="frmCadUsuario" action="submit" method="POST">
+              <div class="cardCadastro">
+              <label class="labelCardCadastro">Nome</label>
+              <div class="cardSubCadastro">
+                <input id="inputNomUsuario" type="text" name="nome" class="camposCadUsuario"  placeholder="Nome" />
+              </div>
+              <label class="labelCardCadastro">Data de nascimento</label>
+              <div class="cardSubCadastro">
+                <input id="inputDatNascUsuario" type="text" name="datnascimento" class="camposCadUsuario" />
+              </div>
+              <label class="labelCardCadastro">E-mail</label>
+              <div class="cardSubCadastro">
+                <input id="inputEmailUsuario" name="email" class="camposCadUsuario" placeholder="E-mail" />
+              </div>
+              <label class="labelCardCadastro">Celular</label>
+              <div class="cardSubCadastro">
+                <input id="inputCelularUsuario" name="celular" class="camposCadUsuario" placeholder="(41) 9 9999 9999" />
+              </div>
+              <label class="labelCardCadastro">Senha</label>
+              <div class="cardSubCadastro">
+                <input id="inputSenhaUsuario" type="password" name="senha" class="camposCadUsuario" placeholder="Senha" minlength="6" required />
+              </div>
+            </div>
+            <div id="btnCadastrar" class="botaoCadastrar">
+              <button type="submit" class="textoBtnCadastrar">Cadastrar</button>
+            </div>
+          </form>        
+ </body> 
