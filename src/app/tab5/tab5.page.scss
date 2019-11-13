@@ -1,0 +1,79 @@
+.menu {
+ background-color: #13CE66;
+ width: 375px;
+ height: 60px;
+}
+
+.logoArvore {
+ opacity: 0.64;
+ margin-left: 84%;
+ margin-top: 2%;
+ width: 15%;
+ height: 7%;
+ position: absolute;
+}
+
+.alteracao{
+ font-family: inherit;
+ line-height: normal;
+}
+
+.cardAlteracao {
+ background-color: rgba(255, 255, 255, 0);
+ border: 0.5px dotted #969FAA;
+ border-radius: 33.33px;
+ width: 339px;
+ height: 421px;
+ margin-left: 5%;
+ margin-bottom: -8%;
+}
+
+.cardSubCadastro {
+ background-color: rgba(255, 255, 255, 0);
+ border: 0.5px dotted #969FAA;
+ border-radius: 33.33px;
+ width: 300px;
+ height: 50px;
+ margin-left: 5.8%;
+ margin-top: 2%;
+}
+
+.labelCardCadastro{
+ margin-left: 8%;
+ margin-top: 14%;
+ display: inline-block;
+}   
+
+.camposCadUsuario {
+ color: #47525E;
+ font-family: Lato;
+ font-size: 18px;
+ font-weight: 400;
+ line-height: 26.33px;
+ text-align: left;
+ margin-left: 7%;
+ margin-top: 2.9%;
+ width: 86%;
+ border:0px
+}
+
+.textoBtnSalvar {
+ font-weight: 800;
+ color: white;
+ margin-bottom: 4%;
+ margin-top: 7%;
+ display: inline-block;
+ font-family: inherit;
+}
+
+.botaoSalvar {
+ border-radius: 18px;
+ background: #2ecc71;
+ border: #27ae60 1px solid;
+ width: 136.33px;
+ height: 43px;
+ margin-left: 32%;
+ text-align: center;
+ margin-bottom: 5%;
+ margin-top: 3%;
+}

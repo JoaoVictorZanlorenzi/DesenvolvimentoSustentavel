@@ -62,63 +62,119 @@ margin-top: 74%;
  border: 0.5px dotted rgba(179, 184, 190, 0.94);
  border-radius: 33.33px;
  width: 340px;
- height: 60px;
+ height: 45px;
  margin-top: 90%;
  margin-left: 5%;
  position: absolute;
 }
 
 main {
-    text-align: center;
-    font-size: 8em;
+ text-align: center;
+ font-size: 8em;
 }
 
-.liga-desliga__checkbox {
-    position: absolute;
-    left: -9999px;
+.liga-desliga-checkbox {
+ position: absolute;
+ left: -9999px;
 }
 
-.liga-desliga__botao {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    cursor: pointer;
+.liga-desliga-botao {
+ display: inline-block;
+ vertical-align: middle;
+ position: relative;
+ cursor: pointer;
+ margin-left: -57%;
+ margin-bottom: 2%;
 }
 
-.liga-desliga__botao::before,
-.liga-desliga__botao::after {
-    content: "";
-    box-shadow: 0 0 0 1px #CCC;
-    transition: all 0.2s ease;
+.liga-desliga-botao::before,
+.liga-desliga-botao::after 
+
+{
+ content: "";
+ box-shadow: 0 0 0 1px #CCC;
+ transition: all 0.2s ease;
 }
 
-.liga-desliga__botao::before {
-    display: inline-block;
-    border-radius: 1em;
-    height: 1em;
-    width: 2em;
-    margin-right: 0.5em;
-    background: #900;
+.liga-desliga-botao::before {
+display: inline-block;
+border-radius: 1em;
+height: 37px;
+width: 71px;
+margin-right: 0.5em;
+background: #900;
+margin-bottom: 68%;
 }
 
-.liga-desliga__botao::after {
-    position: absolute;
-    top: 0.025em;
-    left: 0.025em;
-    width: 0.95em;
-    height: 0.95em;
-    border-radius: 100%;
-    background: #FFF;
+.liga-desliga-botao::after {
+ position: absolute;
+ top: 1.4%;
+ left: 1%;
+ width: 28px;
+ height: 20%;
+ border-radius: 100%;
+ background: #FFF;
 }
 
-.liga-desliga__checkbox:checked + .liga-desliga__botao::before {
-    background: #55D069;
+.liga-desliga-checkbox:checked + .liga-desliga-botao::before {
+ background: #55D069;
 }
 
-.liga-desliga__checkbox:checked + .liga-desliga__botao::after {
-    left: 1.025em;
+.liga-desliga-checkbox:checked + .liga-desliga-botao::after {
+ left: 31.2%;
 }
 
-.liga-desliga__checkbox:focus + .liga-desliga__botao::before {
-    outline: 3px dotted #CCC;
+.liga-desliga-checkbox:focus + .liga-desliga-botao::before {
+ outline: 3px dotted #CCC;
 }
+
+.cardEvento{
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.5px dotted #969FAA;
+  border-radius: 33.33px;
+  width: 343px;
+  height: 222px;
+  margin-left: 4.5%;
+  margin-top: 103%;
+  position: absolute;
+}
+
+.borda {
+ width: 100%;
+ background-color: rgba(255, 255, 255, 0);
+ border: 0.02px dotted #969FAA;
+ border-radius: 33.33px;
+ position: absolute;
+}
+
+.discussao{
+ color: #303A3A;
+ font-family: Kanit;
+ font-size: 19.33px;
+ font-weight: 400;
+ font-weight: bolder;
+ margin-left: 36%;
+}
+
+.comentario{
+ background-color: rgba(255, 255, 255, 0);
+ border: 0.5px dotted #969FAA;
+ border-radius: 33.33px;
+ width: 315.67px;
+ height: 42.67px;
+ margin-top: 46%;
+ margin-left: 4%;
+}
+
+.camposCadUsuario {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.33px;
+    text-align: left;
+    margin-left: 4%;
+    margin-top: 1.9%;
+    width: 86%;
+    border:0px
+  }
