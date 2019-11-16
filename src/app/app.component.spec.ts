@@ -62,5 +62,4 @@ describe('AppComponent', () => {
     expect(menuItems.length).toEqual(2);   
     expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/paginaInicial');
   });
-
 });

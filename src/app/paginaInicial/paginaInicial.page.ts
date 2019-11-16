@@ -23,7 +23,7 @@ export class paginaInicial implements OnInit {
     //OnClick - vai para tela de cadastro.
     $("#cadastreSe").off().on('click', function(){
 
-      document.location.href = "http://localhost:8100/tabs/tab3";
+      document.location.href = "http://localhost:8100/tabs/tab2";
   
     });
   
