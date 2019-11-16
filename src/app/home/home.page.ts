@@ -12,6 +12,16 @@ export class HomePage {
   ) { }
 
   ngAfterViewInit() {
+
+
+    function carregaUsuario(){
+      var usuario = JSON.parse(ObterObjetoStorage(localStorage,'usuarioSession'));
+      //Objeto retornado:
+      alert(usuario);
+      //Preencher campos com dados retornados da session...
+      
+    }
+
     //busca Grupos Recentes 
     function buscaGruposRecentes() {
       x();
@@ -55,6 +65,13 @@ export class HomePage {
       $("#descGrupoRecente2").text("Limpeza da praia de Guaratuba no dia 28/07/2019.");
       teste.css("background-image", "url(/assets/" + img[0] + ")");
       teste2.css("background-image", "url(/assets/" + img[1] + ")");
+    }
+    /**
+     * Obtém valor do storage
+     */
+    function ObterObjetoStorage(storage, key) {
+      var result = storage.getItem(key);      
+      return result;    
     }
   }
 }

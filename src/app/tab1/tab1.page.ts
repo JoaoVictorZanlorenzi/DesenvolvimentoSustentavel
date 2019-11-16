@@ -13,18 +13,23 @@ export class Tab1Page {
 
   ngAfterViewInit(){
 
-    $("#frmLogin").submit(function(e){
+    //Evento do click do botão
+    $("#btnLogin").off().on('click', function(e){
       var camposInvalidos = ValidaCamposLogin();
+      var usuarioLogin = {
+        email: $("#inputLoginEmail").val(),
+        senha: $("#inputLoginSenha").val()
+      }
       if(camposInvalidos == "" || camposInvalidos == null || camposInvalidos == undefined ){
         e.preventDefault();                                
         $.ajax({            
           type: "POST",
           contentType: "application/json",
           url: "https://localhost:44376/api/Teste/Login",                                    
-          data: JSON.stringify($(this).serialize()),
+          data: JSON.stringify(usuarioLogin),
           dataType: 'JSON',
           success: function(response){
-              alert(response);            
+            iniciaSessaoUsuario(JSON.parse(response));
           },
           error: function(){
             alert("Usuário ou senha inválidos");
@@ -34,6 +39,36 @@ export class Tab1Page {
         alert('Por favor, preencha os campos a seguir:\n'+camposInvalidos);
       }
     });
+
+    /**
+    *  Inicia a sessão do usuário no storage
+    */
+    function iniciaSessaoUsuario(usuario){      
+      var usuarioSession = { 
+        nome: usuario.NomUsuario,
+        datnascimento: usuario.DatNascimento,
+        email: usuario.Senha,
+        celular: usuario.NumCelular,
+        senha: usuario.Email     
+      }      
+      
+      //Insere objeto no Storage  
+      InserirItemStorage(localStorage,'usuarioSession', JSON.stringify(usuarioSession) , function(){        
+        window.location.replace(window.location.origin + '/tabs/home');
+      });
+            
+    }   
+    /**
+    *  Insere item no storage
+    */
+    function InserirItemStorage(storage, key, value, callback) {
+
+      var result = storage.setItem(key, value);
+
+      if (typeof callback == 'function') {
+        callback();
+      }                  
+    }
 
     function ValidaCamposLogin(){
       var camposInvalidos = "";
@@ -48,6 +83,6 @@ export class Tab1Page {
       
       return camposInvalidos;
       };  
-    }
+    };      
   }
 
