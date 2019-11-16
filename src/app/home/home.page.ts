@@ -12,12 +12,12 @@ export class HomePage {
   ) { }
 
   ngAfterViewInit() {
-
+    carregaUsuario();
 
     function carregaUsuario(){
       var usuario = JSON.parse(ObterObjetoStorage(localStorage,'usuarioSession'));
       //Objeto retornado:
-      alert(usuario);
+      alert('bem vindo ' + usuario.nome);
       //Preencher campos com dados retornados da session...
       
     }
