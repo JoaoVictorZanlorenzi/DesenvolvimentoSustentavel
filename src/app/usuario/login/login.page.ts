@@ -3,11 +3,11 @@ import * as $ from 'jquery';
 
 
 @Component({
- selector: 'app-tab1',
- templateUrl: 'tab1.page.html',
- styleUrls: ['tab1.page.scss']
+ selector: 'app-login',
+ templateUrl: 'login.page.html',
+ styleUrls: ['login.page.scss']
 })
-export class Tab1Page {
+export class login {
 
   constructor() {}
 
@@ -25,7 +25,7 @@ export class Tab1Page {
         $.ajax({            
           type: "POST",
           contentType: "application/json",
-          url: "https://localhost:44376/api/Teste/Login",                                    
+          url: "https://localhost:44376/api/Usuario/Login",                                    
           data: JSON.stringify(usuarioLogin),
           dataType: 'JSON',
           success: function(response){
@@ -49,7 +49,11 @@ export class Tab1Page {
         datnascimento: usuario.DatNascimento,
         email: usuario.Senha,
         celular: usuario.NumCelular,
-        senha: usuario.Email     
+        senha: usuario.Email,
+        endereco: usuario.Endereco.Endereco,
+        cidade: usuario.Endereco.Cidade,
+        estado: usuario.Endereco.Estado,
+        cep: usuario.Endereco.Cep
       }      
       
       //Insere objeto no Storage  

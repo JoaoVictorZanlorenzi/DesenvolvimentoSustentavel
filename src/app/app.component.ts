@@ -16,6 +16,10 @@ export class AppComponent {
   ) {
     this.initializeApp();
   }
+
+  ngAfterViewInit(){
+    
+  }
   public appPages = [   
     {
       title: 'Inicio',

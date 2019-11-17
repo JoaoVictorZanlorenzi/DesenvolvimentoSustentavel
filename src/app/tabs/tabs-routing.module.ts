@@ -6,34 +6,14 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage,
-    children: [     
-      {
-        path: 'tab1',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
-          }
-        ]
-      },
-      {
-        path: 'tab2',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
-          }
-        ]
-      },
+    children: [           
       {
         path: 'tab3',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../usuario/editarDadosUsuario/tab3.module').then(m => m.Tab3PageModule)
           }
         ]
       },
@@ -43,7 +23,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab4/tab4.module').then(m => m.Tab4PageModule)
+              import('../evento/tab4/tab4.module').then(m => m.Tab4PageModule)
           }
         ]
       }, {
@@ -52,7 +32,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab5/tab5.module').then(m => m.Tab5PageModule)
+              import('../usuario/tab5/tab5.module').then(m => m.Tab5PageModule)
           }
         ]
       },
@@ -62,7 +42,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../home/home.module').then(m => m.HomePageModule)
+              import('../evento/home/home.module').then(m => m.HomePageModule)
           }
         ]
       },

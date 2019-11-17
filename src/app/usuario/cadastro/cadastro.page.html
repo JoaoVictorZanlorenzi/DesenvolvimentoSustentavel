@@ -1,0 +1,61 @@
+﻿<!doctype html>
+ <body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <div class="menu">
+            <img id="iconeVoltar" class="iconeVoltar" src="assets/icon/iconeVoltar.png" />
+        </div>        
+          <img class="logoArvore" src="assets/icon/logoArvore.png" />
+          
+          <div class="informacao">
+            <label> Informe seus dados cadastrais</label>
+          </div>
+          <form id="frmCadUsuario" action="submit" method="POST">
+              <div class="cardCadastro">
+              <label  id="lblNome" class="labelCardCadastro">Nome</label>              
+                <div id="cardSubCadastroNome" class="cardSubCadastro">
+                  <input id="inputNomUsuario" type="text" name="nome" class="camposCadUsuario"  placeholder="Nome" />
+                </div>             
+              <label id="lblDatNascimento" class="labelCardCadastro">Data de nascimento</label>
+              <div id="cardSubCadastroDatNascimento" class="cardSubCadastro">
+                <input id="inputDatNascUsuario" type="text" name="datnascimento" class="camposCadUsuario" />
+              </div>
+              <label id="lblEmail" class="labelCardCadastro">E-mail</label>
+              <div id="cardSubCadastroEmail" class="cardSubCadastro">
+                <input id="inputEmailUsuario" name="email" class="camposCadUsuario" placeholder="E-mail" />
+              </div>
+              <label id="lblCelular" class="labelCardCadastro">Celular</label>
+              <div id="cardSubCadastroCelular" class="cardSubCadastro">
+                <input id="inputCelularUsuario" name="celular" class="camposCadUsuario" placeholder="(41) 9 9999 9999" />
+              </div>                                          
+              <label id="lblSenha" class="labelCardCadastro">Senha</label>
+              <div id="cardSubCadastroSenha" class="cardSubCadastro">
+                <input id="inputSenhaUsuario" type="password" name="senha" class="camposCadUsuario" placeholder="Senha" minlength="6" required />
+              </div>
+              <label id ="lblEndereco" class="labelCardCadastro">Endereço</label>
+            <div id="cardSubCadastroEndereco" class="cardSubCadastro">
+              <input id="inputEndereco" name="endereco" class="camposCadUsuario" placeholder="" />
+            </div>
+              <label id="lblCidade" class="labelCardCadastro">Cidade</label>
+              <div id="cardSubCadastroCidade" class="cardSubCadastro">
+                <input id="inputCidade" name="cidade" class="camposCadUsuario" placeholder="" />
+              </div>
+              <label id="lblEstado" class="labelCardCadastro">Estado</label>
+              <div id="cardSubCadastroEstado" class="cardSubCadastro">
+                <input id="inputEstado" name="estado" class="camposCadUsuario" placeholder="" />
+              </div>
+              <label id="lblCep" class="labelCardCadastro">CEP</label>
+              <div id="cardSubCadastroCep" class="cardSubCadastro">
+                <input id="inputCep" name="cep" class="camposCadUsuario" placeholder="" />
+              </div>
+            </div>            
+            <div id="btnProsseguirCadastro" class="botaoCadastrar">
+                <span  class="textoBtnProsseguir">Continuar</span>
+              </div>
+            <div id="btnCadastrar" class="botaoCadastrar">
+              <span id="spanCadastrar" class="textoBtnCadastrar">Cadastrar </span>
+            </div>
+          </form>        
+ </body> 

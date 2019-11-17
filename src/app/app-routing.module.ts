@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  //Página inicial default
   {
     path: '',
     redirectTo: 'paginaInicial',
@@ -14,6 +15,22 @@ const routes: Routes = [
   {
     path: 'paginaInicial',
     loadChildren: () => import('./paginaInicial/paginaInicial').then(m => m.paginaInicialPageModule)
+  },
+  
+
+  //Páginas de usuário
+  { path: 'usuario/login',
+    loadChildren: () => import('./usuario/login/login.module').then(m => m.loginModule)
+  },
+  { path: 'usuario/cadastro',
+  loadChildren: () => import('./usuario/cadastro/cadastro.module').then(m => m.cadastroPageModule)
+  },
+
+
+
+  //Páginas de evento
+  { path: 'evento/home',
+  loadChildren: () => import('./evento/home/home.module').then(m => m.HomePageModule)
   }
 ];
 @NgModule({

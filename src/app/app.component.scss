@@ -1,0 +1,180 @@
+
+
+//Dados usuario
+#nomUsuario{
+    font-family: Lato;
+    font-size: 24px;
+    left: 62px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 9.4px;
+    position: absolute;
+}
+//Botões
+.btnVoltar {
+    width: 26.67px;
+    height: 26.67px;
+    position: absolute;
+    right: 336px;
+}
+
+//Barras e divisões
+.topbarUsuario{
+    background-color: #13CE66;
+    width: 376px;
+    height: 60px;
+}
+.linhaDivisoria {
+    position: absolute;
+    bottom: 445px;
+    height:0.7px;
+    background: #86888f;
+    width: 305px;
+  }
+//Containers
+.containerUsuario{
+    position: absolute;
+    background-color: rgba(19, 206, 102, 0);
+    border: 0.5px solid #989aa2;
+    border-radius: 33.33px;
+    width: 281.67px;
+    height:  54.33px;
+    bottom: 500px;
+    left: 10px;
+}
+.containerEmail {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.5px solid #8492A6;
+    border-radius: 33.33px;
+    width: 280px;
+    height: 29.67px;
+    left: 9px;
+    position: relative;
+    top: 63px;
+  }
+  
+.containerEndereco {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.5px solid #8492A6;
+    border-radius: 33.33px;
+    width: 280px;
+    height: 29.67px;
+    left: 9px;
+    position: relative;
+}
+
+.containerCidade {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.5px solid #8492A6;
+    border-radius: 33.33px;
+    width: 280px;
+    height: 29.67px;
+    left: 9px;
+    position: relative;
+    bottom: 35px;
+}
+
+.containerEstado {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.5px solid #8492A6;
+    border-radius: 33.33px;
+    width: 280px;
+    height: 29.67px;
+    left: 9px;
+    position: relative;
+    bottom: 66px;
+}
+
+.containerDatNascimento {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.5px solid #8492A6;
+    border-radius: 33.33px;
+    width: 280px;
+    height: 29.67px;
+    left: 9px;
+    position: relative;
+    bottom:96px;
+}
+
+input{
+    position: relative;
+    top: 7px;
+    left: 16px;
+    border: none;
+}
+
+//Informativos
+.informacoes {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.67px;
+    text-align: left;
+    bottom: 442px;
+    position: absolute;
+} 
+
+.infoEmail {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 20.67px;
+    text-align: left;
+    outline: none;
+    top: 50px;
+    position: relative;
+    left: 17px;
+    top: 90px;
+}
+.infoEndereco {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 20.67px;
+    text-align: left;
+    outline: none;
+    top: 26px;
+    position: relative;
+    left: 15px;
+    top: 27px;
+}
+.infoCidade {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 20.67px;
+    text-align: left;
+    outline: none;
+    top: -7px;
+    position: relative;
+    left: 15px;
+}
+.infoEstado {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 20.67px;
+    text-align: left;
+    outline: none;
+    top: -38px;
+    position: relative;
+    left: 15px;
+}
+.infoDatNascimento {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 20.67px;
+    text-align: left;
+    outline: none;
+    top: -68px;
+    position: relative;
+    left: 15px;
+}

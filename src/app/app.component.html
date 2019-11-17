@@ -4,23 +4,48 @@
 
   <ion-split-pane>
     <ion-menu type="overlay">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon" ></ion-icon>
-              <ion-label>
-                {{p.title}}
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-      </ion-content>
+      
+          <div class="topbarUsuario">
+              <ion-tab-button>
+                  <img class="btnVoltar" src="assets/icon/iconeVoltar.png" />
+                </ion-tab-button>
+          </div>
+          <div class="containerUsuario">                  
+            <p id="nomUsuario"></p>
+          </div>  
+          <div>
+            <p class="informacoes">Informações</p>
+          </div>  
+          <div class="linhaDivisoria">
+            
+          </div>
+
+          <span class="infoEmail">E-mail</span>
+          <div class="containerEmail">
+              <input id="inputEmail" type="text">
+          </div>
+          <div>
+            
+          </div>
+          <span class="infoEndereco">Endereço</span>
+          <div class="containerEndereco">
+              <input id="inputEndereco" type="text">
+          </div>
+          
+          <span class="infoCidade">Cidade</span>
+          <div class="containerCidade">
+            <input id="inputCidade" type="text">
+          </div>  
+          
+          <span class="infoEstado">Estado</span>
+          <div class="containerEstado">
+              <input id="inputEstado" type="text">
+          </div> 
+          
+            <span class="infoDatNascimento">Data de nascimento</span>
+          <div class="containerDatNascimento">
+              <input id="inputDatNascimento" type="text">
+          </div>                                  
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>
   </ion-split-pane>

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import * as $ from 'jquery';
 import { JsonPipe } from '@angular/common';
 @Component({
-  selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  selector: 'app-cadastro',
+  templateUrl: 'cadastro.page.html',
+  styleUrls: ['cadastro.page.scss']
 })
-export class Tab2Page {
+export class cadastro {
 
   constructor() {}
   ngAfterViewInit(){
@@ -16,25 +16,34 @@ export class Tab2Page {
     
     function CarregaEventos(){
       EnviarFormCadUsuario();
+      HabilitarSegundaPaginaCadastro(false);
+      ProsseguirSegundaPaginaCadastro();
+      voltarPaginaInicialCadastro();
     };
 
     //Envia dados do cadastro
     function EnviarFormCadUsuario(){      
       $('#btnCadastrar').off().on('click', function (e) {
+        console.log($("#inputEndereco").val());            
         var objCadastro = {
           nome : $("#inputNomUsuario").val(),
           datnascimento : $("#inputDatNascUsuario").val(),
           email : $("#inputEmailUsuario").val(),
           celular : $("#inputCelularUsuario").val(),
-          senha : $("#inputSenhaUsuario").val()
-        }                
+          senha : $("#inputSenhaUsuario").val(),
+          endereco: $("#inputEndereco").val(),
+          cidade: $("#inputCidade").val(),
+          estado: $("#inputEstado").val(),
+          cep: $("#inputCep").val()
+        }    
+        console.log(objCadastro);            
         var camposInvalidos = ValidaCamposCadUsuario();
         if(camposInvalidos == "" || camposInvalidos == null || camposInvalidos == undefined ){                    
           e.preventDefault();                                
           $.ajax({            
             type: "POST",
             contentType: "application/json",
-            url: "https://localhost:44376/api/Teste/CadastrarUsuario",                                    
+            url: "https://localhost:44376/api/Usuario/CadastrarUsuario",                                    
             data: JSON.stringify(objCadastro),
             dataType: 'JSON',
             success: function(usuario){                
@@ -82,7 +91,7 @@ export class Tab2Page {
         $.ajax({
           type:"POST",
           contentType: "application/json",
-          url: "https://localhost:44376/api/Teste/Login",
+          url: "https://localhost:44376/api/Usuario/Login",
           data: usuario,
           dataType: 'JSON',
           success: function(data) {            
@@ -122,6 +131,73 @@ export class Tab2Page {
       if (typeof callback == 'function') {
         callback();
       }                  
+    }
+
+    
+    function ProsseguirSegundaPaginaCadastro(){
+      $("#btnProsseguirCadastro").off().on('click',function(){
+        HabilitarSegundaPaginaCadastro(true);
+      });
+    }
+
+    function HabilitarSegundaPaginaCadastro(habilita){
+      console.log(habilita);
+      if (habilita) {
+        
+        $("#lblNome").hide();    
+        $("#cardSubCadastroNome").hide();
+        $("#lblDatNascimento").hide();
+        $("#cardSubCadastroDatNascimento").hide();
+        $("#lblEmail").hide();
+        $("#cardSubCadastroEmail").hide();        
+        $("#lblCelular").hide();
+        $("#cardSubCadastroCelular").hide();
+        $("#lblSenha").hide();
+        $("#cardSubCadastroSenha").hide();
+        $("#iconeVoltar").show();
+        $("#btnCadastrar").show();
+
+        $("#lblEndereco").show();
+        $("#cardSubCadastroEndereco").show();        
+        $("#lblCidade").show();        
+        $("#cardSubCadastroCidade").show();              
+        $("#lblEstado").show();
+        $("#cardSubCadastroEstado").show();
+        $("#lblCep").show();
+        $("#cardSubCadastroCep").show();         
+        $("#btnProsseguirCadastro").hide();    
+        
+      } else {
+        
+        $("#lblNome").show();    
+        $("#cardSubCadastroNome").show();
+        $("#lblDatNascimento").show();
+        $("#cardSubCadastroDatNascimento").show();
+        $("#lblEmail").show();
+        $("#cardSubCadastroEmail").show();        
+        $("#lblCelular").show();
+        $("#cardSubCadastroCelular").show();
+        $("#lblSenha").show();
+        $("#cardSubCadastroSenha").show();  
+        $("#btnProsseguirCadastro").show();  
+
+        $("#lblEndereco").hide();
+        $("#cardSubCadastroEndereco").hide();
+        $("#lblCidade").hide();
+        $("#cardSubCadastroCidade").hide();
+        $("#lblEstado").hide();
+        $("#cardSubCadastroEstado").hide();
+        $("#lblCep").hide();
+        $("#cardSubCadastroCep").hide(); 
+        $("#btnCadastrar").hide();    
+        $("#iconeVoltar").hide();         
+      }                 
+    }
+
+    function voltarPaginaInicialCadastro(){
+      $("#iconeVoltar").off().on('click',function(){
+        HabilitarSegundaPaginaCadastro(false);
+      });
     }
   }
 }

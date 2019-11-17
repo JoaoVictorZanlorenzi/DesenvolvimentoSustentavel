@@ -16,14 +16,14 @@ export class paginaInicial implements OnInit {
     //OnClick entrar- vai para tela de login
     $("#entrar").off().on('click', function(){
 
-      document.location.href = "http://localhost:8100/tabs/tab1";
+      document.location.replace(window.location.origin + '/usuario/login');
   
     });
 
     //OnClick - vai para tela de cadastro.
     $("#cadastreSe").off().on('click', function(){
 
-      document.location.href = "http://localhost:8100/tabs/tab2";
+      document.location.replace(window.location.origin + '/usuario/cadastro');
   
     });
   

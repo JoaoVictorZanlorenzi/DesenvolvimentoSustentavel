@@ -11,16 +11,28 @@ export class HomePage {
   constructor(
   ) { }
 
-  ngAfterViewInit() {
-    carregaUsuario();
+  ngAfterViewInit() {    
+    CarregaEventosPagina();
+
+    function CarregaEventosPagina(){
+      carregaUsuario();
+      buscaEventosDestaques();
+      buscaGruposRecentes();
+    }
 
     function carregaUsuario() {
       var usuario = JSON.parse(ObterObjetoStorage(localStorage, 'usuarioSession'));
       //Objeto retornado:
 
-      //Preencher campos com dados retorna // if(usuario.nome)
-      // alert('bem vindo ' + usuario.nome);dos da session...
-
+      //Preencher campos com dados retorna //
+      console.log(usuario);
+      $("#nomUsuario").text(usuario.nome);
+      $("#inputEmail").val(usuario.email);
+      $("#inputEndereco").val(usuario.endereco);
+      $("#inputCidade").val(usuario.cidade);
+      $("#inputEstado").val(usuario.estado);
+      $("#inputDatNascimento").val(usuario.datnascimento);
+      
     }
     //busca Grupos Recentes
     function buscaGruposRecentes() {
@@ -29,18 +41,27 @@ export class HomePage {
 
     //busca eventos destaques
     function buscaEventosDestaques() {
-      var request = $.ajax({
+      // var request = 
+      $.ajax({
         type: "GET",
-        contentType: "application/json; charset-utf-8",
-        url: "https://localhost:44376/api/Evento/BuscaEventoDestaque"
+        contentType: "application/json",
+        url: "https://localhost:44376/api/Evento/BuscaEventoDestaque",
+        data: '',
+        dataType: 'JSON',
+        success: function (data){
+          
+        },
+        error: function (){
+
+        }
       });
-      request.done(function (data) {
-        EventoDestaque(data);
-        alert("sucesos" + data.DscEvento);
-      });
-      request.fail(function(data){
-      alert("erro");
-      });
+      // request.done(function (data) {
+      //   EventoDestaque(data);
+      //   alert("sucesos" + data.DscEvento);
+      // });
+      // request.fail(function(data){
+      // alert("erro");
+      // });
     }
     //onclick em determinado grupo-  vai para tela do grupo
     $("#cardGruposRecentes").off('click').on('click', function () {
@@ -54,9 +75,7 @@ export class HomePage {
       alert("vai pagina grupo de codigo: " + codigo);
       //chamada ajax passa codigo como parametro
 
-    });
-    buscaEventosDestaques();
-    buscaGruposRecentes();
+    });    
 
     //simulação eventos destaque
     function EventoDestaque(Evento) {
