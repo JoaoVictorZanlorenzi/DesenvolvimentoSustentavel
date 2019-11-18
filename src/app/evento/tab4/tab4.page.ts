@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavParams, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab4',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class Tab4Page {
 
-  constructor() {}
+  constructor() {
+  }
+
 
 }

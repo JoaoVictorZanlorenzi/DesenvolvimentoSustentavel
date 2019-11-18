@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import * as $ from 'jquery';
-import { bindCallback } from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -36,24 +35,32 @@ export class HomePage {
     }
     //busca Grupos Recentes
     function buscaGruposRecentes() {
-      x();
+      var request = $.ajax({
+        type: "GET",
+        contentType: "application/json; charset-utf-8",
+        url: "https://localhost:44376/api/Evento/BuscaGruposRecentes"
+      });
+      request.done(function (data) {       
+        GruposRecentes(JSON.parse(data));
+      });
+      request.fail(function(data){
+      alert("erro ao carregar gruposRecentes");
+      });
     }
 
     //busca eventos destaques
     function buscaEventosDestaques() {
       // var request = 
-      $.ajax({
+      var request= $.ajax({
         type: "GET",
-        contentType: "application/json",
-        url: "https://localhost:44376/api/Evento/BuscaEventoDestaque",
-        data: '',
-        dataType: 'JSON',
-        success: function (data){
-          
-        },
-        error: function (){
-
-        }
+        contentType: "application/json; charset-utf-8",
+        url: "https://localhost:44376/api/Evento/BuscaEventoDestaque"
+      });
+      request.done(function (data) {       
+        EventoDestaque(JSON.parse(data));
+      });
+      request.fail(function(data){
+      alert("erro ao carrega Evento destaque");
       });
       // request.done(function (data) {
       //   EventoDestaque(data);
@@ -71,7 +78,7 @@ export class HomePage {
 
     //recentes2
     $("#cardGruposRecentes2").off('click').on('click', function () {
-      var codigo = $("#cardGruposRecentes2 #codigoGrupo").val()
+      var codigo = $("#cardGruposRecentes2 #codigoGrupo2").val()
       alert("vai pagina grupo de codigo: " + codigo);
       //chamada ajax passa codigo como parametro
 
@@ -80,19 +87,30 @@ export class HomePage {
     //simulação eventos destaque
     function EventoDestaque(Evento) {
       $("#cardEventosDestaque").css("background-image", "url(/assets/praia.png)");
-      $("#descEventoDestaque").text(Evento.DscEvento);
+      $("#descEventoDestaque").text(Evento.DscEvento +"  dia "+Evento.DatInicioEvento);
+      $("#descEventoDestaque").val(Evento.CodEvento)
     }
+    $("#cardEventosDestaque").off().on('click', function(){
+      var codigo = $("#descEventoDestaque").val()
+      alert("Go to page evento cod: "+codigo );
+
+    })
     //simulação grupos recentes
-    function x() {
+    function GruposRecentes(GrupoRecente) {
       var img = ["lixoNeve.jpg", "praia.png"];
       var teste = $("#cardGruposRecentes");
       var teste2 = $("#cardGruposRecentes2");
       var aux = "url(/assets/" + img + ")";
-      $("#descGrupoRecente").text("Limpeza ao redor do vulcao x");
-      $("#descGrupoRecente2").text("Limpeza da praia de Guaratuba no dia 28/07/2019.");
+
+      $("#descGrupoRecente").text(GrupoRecente[0].DscEvento);
+      $("#codigoGrupo").val((GrupoRecente[0].CodEvento));
+      if(GrupoRecente.length > 0){
+      $("#descGrupoRecente2").text(GrupoRecente[1].DscEvento);
+      $("#codigoGrupo2").val((GrupoRecente[1].CodEvento));
+    }  
       teste.css("background-image", "url(/assets/" + img[0] + ")");
       teste2.css("background-image", "url(/assets/" + img[1] + ")");
-    }
+      }
     /**
      * Obtém valor do storage
      */
